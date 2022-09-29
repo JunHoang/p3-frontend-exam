@@ -1,10 +1,11 @@
 import { useState } from "react";
+import Link from "next/link"
 import { Button, Box, Card, Flex, Heading, Input, ThemeProvider, themes } from "ui";
 
 type AvailableThemes = keyof typeof themes;
 
 export default function Challenge() {
-  const defaultTheme: AvailableThemes = "nineties"
+  const defaultTheme: AvailableThemes = "modern"
   const [currentTheme, setCurrentTheme] = useState<AvailableThemes>(defaultTheme)
 
   function renderTweet() {
@@ -26,7 +27,7 @@ export default function Challenge() {
         <Box sx={{ width: "33%" }} >
           <Card sx={{ p: 4 }}>
             <Heading as="h1">
-              Welcome back, Human!
+              Welcome back, Person!
             </Heading>
             <Box mt={4}>
               <Input placeholder="What's happening? " />
@@ -36,6 +37,10 @@ export default function Challenge() {
             <Heading as="h5" mt={4} mb={2}>Theme switcher</Heading>
             <Button onClick={() => setCurrentTheme("modern")}>Modern</Button>
             <Button onClick={() => setCurrentTheme("nineties")} ml={2}>90s</Button>
+            
+            <br/>
+            <br/>
+            <Link href="/">Back to instructions</Link>
           </Card>
         </Box>
 
