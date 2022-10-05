@@ -22,6 +22,7 @@ const nineties: Theme = merge(base, {
       borderRadius: "0",
       textTransform: "uppercase",
       bg: "hotpink",
+      paddingX: '5px',
       transition: "background 100ms ease-in-out",
       "&:hover": {
         bg: "pink",
@@ -46,7 +47,7 @@ const nineties: Theme = merge(base, {
   forms: {
     input: {
       fontFamily: "body",
-      borderRadius: 0,
+      borderRadius: 5,
       backgroundColor: "secondary",
       border: "transparent",
       color: "gray",

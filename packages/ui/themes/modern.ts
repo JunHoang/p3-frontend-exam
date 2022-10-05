@@ -4,6 +4,7 @@ import base from "./base"
 const modern: Theme = merge(base, {
   buttons: {
     primary: {
+      paddingX: '10px',
     },
     secondary: {
     }
