@@ -12,26 +12,18 @@ const TimeLine = ({ tweetList, currentTheme }: TimeLinePropType) => {
     }, 60000);
 
 
-    const showTweet = () => {
-        if (!tweetList) {
-            return <NoTweet />
-        }
-        return (
-            <>
-                {tweetList.map((tweet, index: number) => (
-                    <RenderTweet
-                        key={index}
-                        tweet={tweet}
-                        currentTheme={currentTheme}
-                    />
-                ))}
-            </>
-        )
+    if (!tweetList) {
+        return <NoTweet />
     }
-
     return (
         <>
-            {showTweet()}
+            {tweetList.map((tweet, index: number) => (
+                <RenderTweet
+                    key={index}
+                    tweet={tweet}
+                    currentTheme={currentTheme}
+                />
+            ))}
         </>
     )
 }
